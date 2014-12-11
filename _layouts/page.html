@@ -1,12 +1,20 @@
----
-layout: default
----
+{% include header.html %}
 
-<article class="page">
-  
-  <h1>{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>
+	<main class="wrap site__content page" role="main">
+
+
+		<article class="grid hentry">
+			<header class="page__header grid__col grid__col--4-of-6 grid__col--centered promo">
+				<h1 class="page__title">{{ page.title | widont }}</h1>
+			</header>
+			<div class=" page__content grid__col grid__col--4-of-6 grid__col--centered">
+				{{ content }}
+			</div>
+		</article>
+
+
+	</main>
+
+
+{% include footer.html %}
