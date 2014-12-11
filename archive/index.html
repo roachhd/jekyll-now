@@ -1,0 +1,20 @@
+---
+layout: page
+title: Archive
+---
+<p>Welcome to the Archives. Here you’ll find every post I’ve written on the site. Even the ones I’m shameful of. I’ve learned a lot since writing a lot of these words. Judge not by these articles.</p>
+
+
+<hr>
+
+
+<ul class="unl posts__list">
+{% for post in site.posts %}
+  <li class="o--p">
+    <a class="a--plain" href="{{ post.url }}">
+      <span class="o--b beta o--mz">{{ post.title }}</span>
+      <span class="meta delta o--b">{{ post.date | date: "%A %-d %B %Y" }}</span>
+    </a>
+  </li>
+{% endfor %}
+</ul>
