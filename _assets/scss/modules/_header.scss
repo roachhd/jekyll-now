@@ -1,0 +1,91 @@
+//
+// Module: header
+// ==============
+//
+// High-level styles for the header
+//
+
+
+
+
+.site__header {
+  margin-bottom: $baseline*2;
+}
+
+
+.site__title {
+  font-weight: 400;
+  text-decoration: none;
+
+
+  &:hover {
+    color: inherit;
+  }
+
+
+  span {
+    margin-bottom: 0;
+  }
+}
+
+
+.site__nav {
+  border-top: 1px solid $lighter-gray;
+
+
+  .night-mode & {
+    border-top-color: $lighter-gray-invert;
+  }
+
+
+  ul {
+    overflow: visible;
+  }
+
+
+  li {
+    margin-top: -1px;
+
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+
+
+  a {
+    @extend %spit--v;
+
+
+    text-decoration: none;
+
+
+    color: $light-gray;
+    border-top: 1px solid transparent;
+
+
+    .night-mode & {
+      color: $light-gray-invert;
+    }
+
+
+    &.active {
+      color: $highlight;
+      border-top-color: $highlight;
+    }
+
+
+    &:hover {
+      color: $highlight;
+    }
+  }
+}
+
+
+.js--toggle-lights {
+  @extend %link;
+  @extend %spit;
+
+
+  font-family: sans-serif;
+}
